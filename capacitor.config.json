@@ -1,0 +1,20 @@
+{
+  "appId": "com.skat.shuiqingqing",
+  "appName": "水清清",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  },
+  "ios": {
+    "contentInset": "automatic"
+  },
+  "android": {
+    "allowMixedContent": true
+  },
+  "plugins": {
+    "StatusBar": {
+      "style": "LIGHT",
+      "backgroundColor": "#e4f2f8"
+    }
+  }
+}

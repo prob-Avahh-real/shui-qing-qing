@@ -1,0 +1,38 @@
+{
+  "name": "ShuiQingQing",
+  "advertisePrefix": "ShuiQingQing-",
+  "uuids": {
+    "service": "c020a100-0001-4000-8000-000000c02001",
+    "status": "c020a101-0001-4000-8000-000000c02001",
+    "telemetry": "c020a102-0001-4000-8000-000000c02001",
+    "control": "c020a103-0001-4000-8000-000000c02001"
+  },
+  "commands": {
+    "REQUEST_STATUS": 1,
+    "REQUEST_MEASURE": 2,
+    "PING": 5
+  },
+  "events": {
+    "STATUS": 128,
+    "TELEMETRY": 129,
+    "PONG": 133,
+    "ERROR": 143
+  },
+  "telemetryFrame": {
+    "bytes": 10,
+    "fields": [
+      { "name": "phCenti", "offset": 0, "type": "uint16", "endian": "le", "scale": 100 },
+      { "name": "tds", "offset": 2, "type": "uint16", "endian": "le" },
+      { "name": "tempCenti", "offset": 4, "type": "uint16", "endian": "le", "scale": 100 },
+      { "name": "turbidityTenth", "offset": 6, "type": "uint16", "endian": "le", "scale": 10 },
+      { "name": "flags", "offset": 8, "type": "uint8" },
+      { "name": "seq", "offset": 9, "type": "uint8" }
+    ],
+    "flags": {
+      "calNeeded": 1,
+      "probeDry": 2,
+      "lowBattery": 4,
+      "compensated": 8
+    }
+  }
+}
